@@ -17,7 +17,7 @@ class Accountents_InfoPage_View(DetailView):
     template_name = ""
     context_object_name = "object"
 
-class AddPageView(CreateView):
+class Accountents_AddPage_View(CreateView):
     model = AccountryTable
     template_name = ""
     fields = ["title","description","price","group"]
