@@ -11,6 +11,6 @@
       {% csrf_token %}
       {{form.as_p}}
       <input type="submit" value="add">
-      <a href="{% accountents.get_absulote_url %}"></a>
+      <a href="{{ 'accountents.get_absulote_url' }}"></a>
   </form>
 {% endblock main %}

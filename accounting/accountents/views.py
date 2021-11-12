@@ -3,14 +3,14 @@ from .models import AccountryTable # models
 from django.views.generic import (
     CreateView,ListView,DeleteView,UpdateView,DetailView
     )
-from django.urls import reverse
+from django.urls import reverse_lazy
 
 # Create your views here.
 url = "accountents/"
 class Accountents_HomePage_View(ListView):
     model = AccountryTable
     template_name = url + "home.html"
-    context_object_name = "object"
+    context_object_name = "objects"
 
 class Accountents_InfoPage_View(DetailView):
     model = AccountryTable
@@ -30,4 +30,4 @@ class Accountents_EditPage_View(UpdateView):
 class Accountents_DeletPage_View(DeleteView):
     model = AccountryTable
     template_name = url + "delete.html"
-    success_url = reverse()
+    success_url = reverse_lazy("accountents_home")

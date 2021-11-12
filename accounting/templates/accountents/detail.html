@@ -10,12 +10,13 @@
   <p>{{object.description}}</p>
   <br>
   <h3>price : 
-  {% if object.group == 'income' %}
+  {% if object.group == "+" %}
       + {{object.price}}
-    {% elif  object.group == 'expenditrue' %}
-     - {{object.price}}
+  {% elif  object.group == "-" %}
+      - {{object.price}}
   {% endif %}
   </h3>
+  
 <hr>
 <i>{{object.date}}</i>
 <br>
