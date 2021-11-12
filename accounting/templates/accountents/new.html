@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+  new
+{% endblock title %}
+
+{% block main %}
+  <h1>add</h1>
+  <hr>
+  <form action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="add">
+      <a href="{% accountents.get_absulote_url %}"></a>
+  </form>
+{% endblock main %}
