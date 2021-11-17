@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+  accountents
+{% endblock title %}
+
+{% block main %}
+    <ul>
+  {% for object in objects %}
+        <li><a href="{% url 'accountents_info' object.id %}">{{object.title}}</a></li>
+  {% endfor %}
+    </ul>
+    <a href="{% url 'accountetns_add' %}">add</a>
+{% endblock main %}

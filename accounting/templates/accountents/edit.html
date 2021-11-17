@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+  edit
+{% endblock title %}
+
+{% block main %}
+  <h1>edit</h1>
+  <hr>
+  <form action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="edit">
+  </form>
+{% endblock main %}
